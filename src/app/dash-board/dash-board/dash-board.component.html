@@ -1,0 +1,43 @@
+
+<app-add-user></app-add-user>
+
+<div class="table-container">
+  <table class="table">
+    <thead class="table table__body table__body--header">
+      <tr class="table-header-row">
+        <th class="table-header-row table-header-row__item">profilePicture</th>
+        <th class="table-header-row table-header-row__item">name</th>
+        <th class="table-header-row table-header-row__item">family</th>
+        <th class="table-header-row table-header-row__item">nickName</th>
+        <th class="table-header-row table-header-row__item">phoneNumber</th>
+        <th class="table-header-row table-header-row__item">email</th>
+        <th class="table-header-row table-header-row__item">community</th>
+        <th class="table-header-row table-header-row__item">birthDay</th>
+        <th class="table-header-row table-header-row__item">gender</th>
+        <th class="table-header-row table-header-row__item">edit</th>
+        <th class="table-header-row table-header-row__item">delete</th>
+      </tr>
+    </thead>
+    <tbody class="table table__body table__body--body">
+
+      <ng-template ngFor let-user [ngForOf]="users$ | async">
+
+        <tr class="table-body-row">
+          <td class="table-body-row table-body-row__item">{{user.profilePicture}}</td>
+          <td class="table-body-row table-body-row__item">{{user.name}}</td>
+          <td class="table-body-row table-body-row__item">{{user.family}}</td>
+          <td class="table-body-row table-body-row__item">{{user.nickName}}</td>
+          <td class="table-body-row table-body-row__item">{{user.phoneNumber}}</td>
+          <td class="table-body-row table-body-row__item">{{user.email}}</td>
+          <td class="table-body-row table-body-row__item">{{user.community}}</td>
+          <td class="table-body-row table-body-row__item">{{user.birthDay}}</td>
+          <td class="table-body-row table-body-row__item">{{user.gender}}</td>
+          <td class="table-body-row table-body-row__item">edit</td>
+          <td class="table-body-row table-body-row__item">delete</td>
+        </tr>
+
+      </ng-template>
+
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,25 @@
+
+.table-container {
+  display: flex;
+  justify-content: center;
+}
+
+.table {
+  &__body {
+    &--header {
+    }
+    &--body {
+    }
+  }
+}
+
+.table-header-row {
+  &__item {
+
+  }
+}
+
+.table-body-row {
+  &__item {
+  }
+}

@@ -1,0 +1,15 @@
+
+
+<div class="form-container">
+  <form action="" [formGroup]="addUserForm" (ngSubmit)="addUserFormSubmit()">
+    <input type="text" placeholder="name" formControlName="name">
+    <input type="text" placeholder="family" formControlName="family">
+    <input type="text" placeholder="nickName" formControlName="nickName">
+    <input type="text" placeholder="phoneNumber" formControlName="phoneNumber">
+    <input type="text" placeholder="email" formControlName="email">
+    <input type="text" placeholder="community" formControlName="community">
+    <input type="text" placeholder="birthDay" formControlName="birthDay">
+    <input type="text" placeholder="gender" formControlName="gender">
+    <button>add new user</button>
+  </form>
+</div>
