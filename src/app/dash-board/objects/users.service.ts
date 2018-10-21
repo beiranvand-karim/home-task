@@ -21,11 +21,9 @@ export class UsersService extends BehaviorSubject<Array<User>> {
     }
   }
 
-  editUser() {
-
-  }
-
-  deleteUser() {
-
+  deleteUser(index: number) {
+    const users =  [...super.getValue()];
+    users.splice(index, 1);
+    super.next(users);
   }
 }

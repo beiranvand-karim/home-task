@@ -17,4 +17,7 @@ export class DashBoardComponent implements OnInit {
   ngOnInit() {
     this.users$ = this.usersService.users$.pipe(skip(1));
   }
+  deleteUser(index: number) {
+    this.usersService.deleteUser(index);
+  }
 }
