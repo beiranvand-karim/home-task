@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-sign-in',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignInComponent implements OnInit {
 
-  constructor() { }
+  signInForm: FormGroup;
+  userName = new FormControl();
+  passWord = new FormControl();
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router
+  ) {
+    this.signInForm = this.formBuilder.group({
+      userName: this.userName,
+      passWord: this.passWord
+    });
+  }
 
   ngOnInit() {
   }
-
+  async signInFormSubmit() {
+    const userName = this.signInForm.controls.userName.value;
+    const passWord = this.signInForm.controls.passWord.value;
+    if (userName === 'admin' && passWord === 'admin') {
+      await this.router.navigate(['/dashBoard']);
+    }
+  }
 }

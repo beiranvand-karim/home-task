@@ -42,7 +42,7 @@ export class AddUserComponent {
     user.nickName = this.addUserForm.controls.nickName.value;
     user.phoneNumber = this.addUserForm.controls.phoneNumber.value;
     user.email = this.addUserForm.controls.email.value;
-    user.commmunity = this.addUserForm.controls.community.value;
+    user.community = this.addUserForm.controls.community.value;
     user.birthDay = this.addUserForm.controls.birthDay.value;
     user.gender = this.addUserForm.controls.gender.value;
     this.usersService.addUser(user);

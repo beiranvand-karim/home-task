@@ -6,7 +6,7 @@ export class User {
   nickName: string;
   phoneNumber: number;
   email: string;
-  commmunity: string;
+  community: string;
   birthDay: number;
   gender: string;
 }
