@@ -26,4 +26,10 @@ export class UsersService extends BehaviorSubject<Array<User>> {
     users.splice(index, 1);
     super.next(users);
   }
+
+  updateUser(index: number, user: User) {
+    const users =  [...super.getValue()];
+    users.splice(index, 1, user);
+    super.next(users);
+  }
 }

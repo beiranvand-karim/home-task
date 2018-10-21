@@ -1,0 +1,14 @@
+
+<div>
+  <form [formGroup]="editUserForm" (ngSubmit)="editUserFormSubmit()" class="edit-user-form">
+    <input class="edit-user-form edit-user-form__input" type="text" placeholder="name" formControlName="name">
+    <input class="edit-user-form edit-user-form__input" type="text" placeholder="family" formControlName="family">
+    <input class="edit-user-form edit-user-form__input" type="text" placeholder="nickName" formControlName="nickName">
+    <input class="edit-user-form edit-user-form__input" type="text" placeholder="phoneNumber" formControlName="phoneNumber">
+    <input class="edit-user-form edit-user-form__input" type="text" placeholder="email" formControlName="email">
+    <input class="edit-user-form edit-user-form__input" type="text" placeholder="community" formControlName="community">
+    <input class="edit-user-form edit-user-form__input" type="text" placeholder="birthDay" formControlName="birthDay">
+    <input class="edit-user-form edit-user-form__input" type="text" placeholder="gender" formControlName="gender">
+    <button>update</button>
+  </form>
+</div>

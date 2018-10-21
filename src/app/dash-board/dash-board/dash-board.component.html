@@ -36,6 +36,8 @@
           <td class="table-body-row table-body-row__item" (click)="deleteUser(i)">delete</td>
         </tr>
 
+        <app-edit-user [key]="i" [user]="user"></app-edit-user>
+
       </ng-template>
 
     </tbody>

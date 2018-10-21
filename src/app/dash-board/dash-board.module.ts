@@ -6,6 +6,7 @@ import {DashBoardComponent} from './dash-board/dash-board.component';
 import {UsersService} from './objects/users.service';
 import {AddUserComponent} from './add-user/add-user.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { EditUserComponent } from './edit-user/edit-user.component';
 
 @NgModule({
   imports: [
@@ -13,7 +14,7 @@ import {ReactiveFormsModule} from '@angular/forms';
     DashBoardRoutingModule,
     ReactiveFormsModule
   ],
-  declarations: [DashBoardComponent, AddUserComponent],
+  declarations: [DashBoardComponent, AddUserComponent, EditUserComponent],
   providers: [
     UsersService
   ]
