@@ -21,23 +21,7 @@
     <tbody class="table table__body table__body--body">
 
       <ng-template ngFor let-user [ngForOf]="users$ | async" let-i="index">
-
-        <tr class="table-body-row">
-          <td class="table-body-row table-body-row__item">{{user.profilePicture}}</td>
-          <td class="table-body-row table-body-row__item">{{user.name}}</td>
-          <td class="table-body-row table-body-row__item">{{user.family}}</td>
-          <td class="table-body-row table-body-row__item">{{user.nickName}}</td>
-          <td class="table-body-row table-body-row__item">{{user.phoneNumber}}</td>
-          <td class="table-body-row table-body-row__item">{{user.email}}</td>
-          <td class="table-body-row table-body-row__item">{{user.community}}</td>
-          <td class="table-body-row table-body-row__item">{{user.birthDay}}</td>
-          <td class="table-body-row table-body-row__item">{{user.gender}}</td>
-          <td class="table-body-row table-body-row__item">edit</td>
-          <td class="table-body-row table-body-row__item" (click)="deleteUser(i)">delete</td>
-        </tr>
-
-        <app-edit-user [key]="i" [user]="user"></app-edit-user>
-
+        <app-user-item [user]="user"></app-user-item>
       </ng-template>
 
     </tbody>

@@ -6,15 +6,21 @@ import {DashBoardComponent} from './dash-board/dash-board.component';
 import {UsersService} from './objects/users.service';
 import {AddUserComponent} from './add-user/add-user.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import { EditUserComponent } from './edit-user/edit-user.component';
+import {EditUserComponent} from './edit-user/edit-user.component';
+import { UserItemComponent } from './user-item/user-item.component';
 
 @NgModule({
   imports: [
     CommonModule,
     DashBoardRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  declarations: [DashBoardComponent, AddUserComponent, EditUserComponent],
+  declarations: [
+    DashBoardComponent,
+    AddUserComponent,
+    EditUserComponent,
+    UserItemComponent
+  ],
   providers: [
     UsersService
   ]

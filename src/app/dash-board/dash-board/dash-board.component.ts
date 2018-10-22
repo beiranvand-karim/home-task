@@ -7,7 +7,7 @@ import {skip} from 'rxjs/operators';
 @Component({
   selector: 'app-dash-board',
   templateUrl: './dash-board.component.html',
-  styleUrls: ['./dash-board.component.scss']
+  styleUrls: ['./dash-board.component.scss'],
 })
 export class DashBoardComponent implements OnInit {
   users$: Observable<Array<User>>;
@@ -16,8 +16,5 @@ export class DashBoardComponent implements OnInit {
   ) { }
   ngOnInit() {
     this.users$ = this.usersService.users$.pipe(skip(1));
-  }
-  deleteUser(index: number) {
-    this.usersService.deleteUser(index);
   }
 }
