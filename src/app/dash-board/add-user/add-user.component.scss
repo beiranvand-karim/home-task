@@ -1,4 +1,9 @@
 
+.add-user-form-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
 
 .add-user-form {
   &__input {

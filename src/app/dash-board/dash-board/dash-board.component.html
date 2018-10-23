@@ -2,28 +2,28 @@
 <app-add-user></app-add-user>
 
 <div class="table-container">
-  <table class="table">
-    <thead class="table table__body table__body--header">
-      <tr class="table-header-row">
-        <th class="table-header-row table-header-row__item">profilePicture</th>
-        <th class="table-header-row table-header-row__item">name</th>
-        <th class="table-header-row table-header-row__item">family</th>
-        <th class="table-header-row table-header-row__item">nickName</th>
-        <th class="table-header-row table-header-row__item">phoneNumber</th>
-        <th class="table-header-row table-header-row__item">email</th>
-        <th class="table-header-row table-header-row__item">community</th>
-        <th class="table-header-row table-header-row__item">birthDay</th>
-        <th class="table-header-row table-header-row__item">gender</th>
-        <th class="table-header-row table-header-row__item">edit</th>
-        <th class="table-header-row table-header-row__item">delete</th>
-      </tr>
-    </thead>
-    <tbody class="table table__body table__body--body">
+  <div class="table">
+    <div class="table table__body table__body--header">
+      <div class="table-header-row">
+        <div class="table-header-row table-header-row__item">profilePicture</div>
+        <div class="table-header-row table-header-row__item">name</div>
+        <div class="table-header-row table-header-row__item">family</div>
+        <div class="table-header-row table-header-row__item">nickName</div>
+        <div class="table-header-row table-header-row__item">phoneNumber</div>
+        <div class="table-header-row table-header-row__item">email</div>
+        <div class="table-header-row table-header-row__item">community</div>
+        <div class="table-header-row table-header-row__item">birthDay</div>
+        <div class="table-header-row table-header-row__item">gender</div>
+        <div class="table-header-row table-header-row__item">edit</div>
+        <div class="table-header-row table-header-row__item">delete</div>
+      </div>
+    </div>
+    <div class="table table__body table__body--body">
 
       <ng-template ngFor let-user [ngForOf]="users$ | async" let-i="index">
-        <app-user-item [user]="user"></app-user-item>
+        <app-user-item [index]="i" [user]="user"></app-user-item>
       </ng-template>
 
-    </tbody>
-  </table>
+    </div>
+  </div>
 </div>

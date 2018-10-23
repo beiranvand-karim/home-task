@@ -1,21 +1,21 @@
 
-<tr class="table-body-row">
-  <td class="table-body-row table-body-row__item">{{user.profilePicture}}</td>
-  <td class="table-body-row table-body-row__item">{{user.name}}</td>
-  <td class="table-body-row table-body-row__item">{{user.family}}</td>
-  <td class="table-body-row table-body-row__item">{{user.nickName}}</td>
-  <td class="table-body-row table-body-row__item">{{user.phoneNumber}}</td>
-  <td class="table-body-row table-body-row__item">{{user.email}}</td>
-  <td class="table-body-row table-body-row__item">{{user.community}}</td>
-  <td class="table-body-row table-body-row__item">{{user.birthDay}}</td>
-  <td class="table-body-row table-body-row__item">{{user.gender}}</td>
-  <td class="table-body-row table-body-row__item">
+<div class="table-body-row">
+  <div class="table-body-row table-body-row__item">{{user.profilePicture}}</div>
+  <div class="table-body-row table-body-row__item">{{user.name}}</div>
+  <div class="table-body-row table-body-row__item">{{user.family}}</div>
+  <div class="table-body-row table-body-row__item">{{user.nickName}}</div>
+  <div class="table-body-row table-body-row__item">{{user.phoneNumber}}</div>
+  <div class="table-body-row table-body-row__item">{{user.email}}</div>
+  <div class="table-body-row table-body-row__item">{{user.community}}</div>
+  <div class="table-body-row table-body-row__item">{{user.birthDay}}</div>
+  <div class="table-body-row table-body-row__item">{{user.gender}}</div>
+  <div class="table-body-row table-body-row__item">
     <button (click)="toggleUpdate()">edit</button>
-  </td>
-  <td class="table-body-row table-body-row__item" >
+  </div>
+  <div class="table-body-row table-body-row__item" >
     <button (click)="deleteUser(index)">delete</button>
-  </td>
-</tr>
+  </div>
+</div>
 
 <div [@slide]="slideState">
   <app-edit-user [key]="index" [user]="user"></app-edit-user>

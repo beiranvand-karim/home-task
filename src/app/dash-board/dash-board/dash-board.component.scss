@@ -15,7 +15,8 @@
 
 .table-header-row {
   &__item {
-
+    display: inline-block;
+    width: 90px;
   }
 }
 
