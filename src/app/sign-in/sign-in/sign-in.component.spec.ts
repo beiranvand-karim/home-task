@@ -1,6 +1,13 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-
 import {SignInComponent} from './sign-in.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import {Router} from '@angular/router';
+
+export class RouterStub {
+  navigate(params) {
+
+  }
+}
 
 describe('SignInComponent', () => {
   let component: SignInComponent;
@@ -8,7 +15,13 @@ describe('SignInComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SignInComponent ]
+      imports: [
+        ReactiveFormsModule
+      ],
+      declarations: [ SignInComponent ],
+      providers: [
+        {provide: Router, useClass: RouterStub}
+      ]
     })
     .compileComponents();
   }));

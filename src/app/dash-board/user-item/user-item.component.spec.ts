@@ -1,6 +1,9 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { UserItemComponent } from './user-item.component';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {UserItemComponent} from './user-item.component';
+import {EditUserComponent} from '../edit-user/edit-user.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import {UsersService} from '../objects/users.service';
+import {User} from '../objects/user';
 
 describe('UserItemComponent', () => {
   let component: UserItemComponent;
@@ -8,9 +11,18 @@ describe('UserItemComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UserItemComponent ]
+      imports: [
+        ReactiveFormsModule
+      ],
+      declarations: [
+        UserItemComponent,
+        EditUserComponent
+      ],
+      providers: [
+        UsersService
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -20,6 +32,8 @@ describe('UserItemComponent', () => {
   });
 
   it('should create', () => {
+    component.user = new User();
+    component.index = 1;
     expect(component).toBeTruthy();
   });
 });

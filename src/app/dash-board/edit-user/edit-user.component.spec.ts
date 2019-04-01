@@ -1,6 +1,8 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-
 import {EditUserComponent} from './edit-user.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import {UsersService} from '../objects/users.service';
+import {User} from '../objects/user';
 
 describe('EditUserComponent', () => {
   let component: EditUserComponent;
@@ -8,9 +10,15 @@ describe('EditUserComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EditUserComponent ]
+      imports: [
+        ReactiveFormsModule
+      ],
+      declarations: [EditUserComponent],
+      providers: [
+        UsersService
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -20,6 +28,8 @@ describe('EditUserComponent', () => {
   });
 
   it('should create', () => {
+    component.user = new User();
+    component.key = 0;
     expect(component).toBeTruthy();
   });
 });

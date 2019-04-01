@@ -1,6 +1,10 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { DashBoardComponent } from './dash-board.component';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {DashBoardComponent} from './dash-board.component';
+import {AddUserComponent} from '../add-user/add-user.component';
+import {UserItemComponent} from '../user-item/user-item.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import {EditUserComponent} from '../edit-user/edit-user.component';
+import {UsersService} from '../objects/users.service';
 
 describe('DashBoardComponent', () => {
   let component: DashBoardComponent;
@@ -8,9 +12,20 @@ describe('DashBoardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DashBoardComponent ]
+      imports: [
+        ReactiveFormsModule
+      ],
+      declarations: [
+        DashBoardComponent,
+        AddUserComponent,
+        UserItemComponent,
+        EditUserComponent
+      ],
+      providers: [
+        UsersService
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
