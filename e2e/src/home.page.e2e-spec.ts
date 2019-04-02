@@ -13,7 +13,7 @@ describe('home page should work fine', () => {
   });
 
   it('should sign in', async function () {
-    const currentUrl = await HomePage.loginInForm();
+    const currentUrl = await HomePage.signIn();
     expect(currentUrl).toContain('/dashBoard');
   });
 

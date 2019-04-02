@@ -2,7 +2,7 @@ import {browser, by, element} from 'protractor';
 
 export class HomePage {
 
-  static async loginInForm() {
+  static async signIn() {
     const userName = element(by.css('.sign-in-form-container input[placeholder="userName"]'));
     await userName.clear();
     await userName.sendKeys('admin');
@@ -14,8 +14,7 @@ export class HomePage {
     const submitButton = element(by.tagName('button'));
     await submitButton.click();
 
-    const addUserForm = await element(by.css('form.add-user-form'));
-    browser.wait(addUserForm, 5000);
+    await browser.waitForAngular();
     return browser.getCurrentUrl() as Promise<any>;
   }
 
