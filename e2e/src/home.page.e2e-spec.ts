@@ -1,18 +1,20 @@
 import {HomePage} from './home.page';
 
-describe('Conduit App E2E Test Suite', () => {
-  const homePage = new HomePage();
-  describe('home page should work fine', () => {
-    beforeAll(() => {
-      homePage.getPage();
-    });
-
-    it('should have right title', () => {
-      homePage.getPageTitle()
-        .then((title: string) => {
-          expect(title).toEqual('HomeTask');
-        });
-    });
-
+describe('home page should work fine', () => {
+  beforeAll(async () => {
+    await HomePage.getPage();
   });
+
+  it('should have right title', () => {
+    HomePage.getPageTitle()
+      .then((title: string) => {
+        expect(title).toEqual('HomeTask');
+      });
+  });
+
+  it('should sign in', async function () {
+    const currentUrl = await HomePage.loginInForm();
+    expect(currentUrl).toContain('/dashBoard');
+  });
+
 });
